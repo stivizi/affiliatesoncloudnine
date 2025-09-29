@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the On Cloud Nine Affiliate Program - Earn While You Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            color: #1a1a1a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/outdoor_wedding_kiss_with_bridesmaids_groomsmen.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(251, 184, 172, 0.1) 0%, rgba(232, 163, 153, 0.1) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 32px;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 32px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-highlight {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e8a399;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .urgency-banner {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 96px 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+            padding: 40px 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #e8a399, #f39c12);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: #2c3e50;
+        }
+
+        .benefit-card p {
+            font-size: 1rem;
+            color: #5a6c7d;
+            margin-bottom: 0;
+        }
+
+        /* Income Section */
+        .income-showcase {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 96px 0;
+            text-align: center;
+        }
+
+        .income-showcase h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .income-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin: 48px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #e8a399;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #ecf0f1;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 96px 0;
+            background: rgba(245, 247, 250, 0.95);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #e8a399;
+            position: relative;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: #2c3e50;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #e8a399;
+        }
+
+        .testimonial-company {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #e8a399 0%, #f39c12 100%);
+            color: white;
+            padding: 96px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 32px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(44, 62, 80, 0.6);
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+        }
+
+        /* Form Section */
+        .signup-form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 96px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 32px;
+            color: #2c3e50;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Lato', sans-serif;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #e8a399;
+            box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #FBB8AC 0%, #e8a399 100%);
+            color: white;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(251, 184, 172, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 48px 32px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-highlight {
+                font-size: 1.4rem;
+            }
+
+            .income-stats {
+                gap: 24px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .benefits-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .benefit-card,
+            .testimonial-card {
+                padding: 32px 24px;
+            }
+
+            .form-container {
+                padding: 32px 24px;
+                margin: 0 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Turn Your Wedding Expertise Into Passive Income</h1>
+            <p>Join the exclusive On Cloud Nine Affiliate Program and earn generous commissions while providing your
+                clients with Victoria's most stunning wedding venue.</p>
+            <div class="hero-highlight">Earn up to $1,500+ per referral</div>
+            <div class="urgency-banner">Limited Spots Available - Join Before They're Gone!</div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>Why Join Our Affiliate Program?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Premium Venue Access</h3>
+                    <p>Offer your clients exclusive access to our stunning 26-acre estate featuring beautiful
+                        indoor/outdoor spaces, equestrian facilities, and rolling hayfields - perfect for creating
+                        magical wedding experiences.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Generous Commissions</h3>
+                    <p>Earn competitive commissions on every successful referral. Our tiered structure rewards
+                        performance with increasing percentages and special bonuses for top affiliates.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Marketing Support</h3>
+                    <p>Receive professional marketing materials, dedicated affiliate manager support, and access to our
+                        exclusive affiliate portal with real-time tracking and reporting tools.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Enhanced Reputation</h3>
+                    <p>Partner with Victoria's premier wedding venue and strengthen your professional reputation by
+                        offering clients access to exceptional, high-quality services they can't find elsewhere.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Flexible Partnership</h3>
+                    <p>Work at your own pace with no minimum requirements. Our program is designed to complement your
+                        existing business without adding unnecessary complexity or time commitments.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Exclusive Perks</h3>
+                    <p>Enjoy exclusive affiliate benefits including venue tours, networking events, and first access to
+                        new services and packages as they're launched.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="income-showcase">
+        <div class="container">
+            <h2>Real Income Potential</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 48px; color: #ecf0f1;">See what our affiliates are earning</p>
+            <div class="income-stats">
+                <div class="stat">
+                    <span class="stat-number">$1,500+</span>
+                    <span class="stat-label">Average per referral</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">$15,000+</span>
+                    <span class="stat-label">Monthly potential</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">$50,000+</span>
+                    <span class="stat-label">Annual earnings</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Affiliates Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"Joining On Cloud Nine's affiliate program was the best business
+                        decision I've made. The venue is absolutely stunning and my clients love having access to such
+                        an exclusive location. I've earned over $25,000 in commissions this year alone!"</div>
+                    <div class="testimonial-author">Sarah Mitchell</div>
+                    <div class="testimonial-company">Victoria Wedding Planner</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"The support from the On Cloud Nine team is incredible. They provide
+                        everything I need - from marketing materials to venue tours. It's truly a partnership that
+                        benefits everyone involved."</div>
+                    <div class="testimonial-author">Jennifer Wong</div>
+                    <div class="testimonial-company">Elite Events Photography</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Earning?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 32px;">Join hundreds of successful wedding professionals already
+                earning passive income with On Cloud Nine.</p>
+            <a href="#signup" class="cta-button">Join the Affiliate Program Now</a>
+        </div>
+    </section>
+
+    <section class="signup-form" id="signup">
+        <div class="container">
+            <div class="form-container">
+                <h2>Join Today - It's Quick & Easy</h2>
+                <form id="affiliate-signup">
+                    <div class="form-group">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business-type">Business Type *</label>
+                        <select id="business-type" name="business-type" required>
+                            <option value="">Select your business type</option>
+                            <option value="Wedding Planner">Wedding Planner</option>
+                            <option value="Photographer">Photographer</option>
+                            <option value="Florist">Florist</option>
+                            <option value="Caterer">Caterer</option>
+                            <option value="Venue Coordinator">Venue Coordinator</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website (if applicable)</label>
+                        <input type="url" id="website" name="website">
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Years of Experience</label>
+                        <select id="experience" name="experience">
+                            <option value="">Select experience level</option>
+                            <option value="1-2">1-2 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="6-10">6-10 years</option>
+                            <option value="10+">10+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="referrals">How did you hear about us?</label>
+                        <input type="text" id="referrals" name="referrals">
+                    </div>
+                    <button type="submit" class="submit-button">Join the Affiliate Program</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 On Cloud Nine. All rights reserved.</p>
+            <p>Creating magical wedding experiences in Victoria, BC</p>
+            <p>26-acre estate • Premium wedding venue • Exclusive affiliate partnerships</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handler
+        document.getElementById('affiliate-signup').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // In a real implementation, this would submit to your backend
+            alert('Thank you for your interest! We will review your application and contact you within 24-48 hours.');
+
+            // Redirect to the full affiliate program page
+            window.location.href = 'index.html';
+        });
+
+        // Smooth scrolling for CTA button
+        document.querySelector('.cta-button').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('signup').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
