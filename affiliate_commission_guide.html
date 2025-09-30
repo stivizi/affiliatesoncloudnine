@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Cloud Nine Affiliate Program - Commission Structure Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            margin-left: 280px;
+            transition: margin-left 0.3s ease;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 32px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        h4 {
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 16px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(-100%);
+        }
+
+        .sidebar-content {
+            padding: 24px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .logo {
+            height: auto;
+            width: 100%;
+            margin-bottom: 32px;
+            align-self: flex-start;
+        }
+
+        .sidebar nav ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 16px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar nav ul li {
+            width: 100%;
+        }
+
+        .sidebar nav ul li a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .sidebar nav ul li a:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: #e8a399;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            transform: translateX(4px);
+        }
+
+        .sidebar nav ul li a:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #e8a399, #f39c12);
+            transition: all 0.3s ease;
+            transform: translateY(-50%);
+        }
+
+        .sidebar nav ul li a:hover:after {
+            width: 4px;
+        }
+
+        /* Sidebar Toggle Button */
+        .sidebar-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #FBB8AC 0%, #e8a399 100%);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(251, 184, 172, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(251, 184, 172, 0.6);
+        }
+
+        .sidebar-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: white;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-toggle span:before,
+        .sidebar-toggle span:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-toggle span:before {
+            top: -6px;
+        }
+
+        .sidebar-toggle span:after {
+            top: 6px;
+        }
+
+        .sidebar-toggle.active span {
+            background: transparent;
+        }
+
+        .sidebar-toggle.active span:before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .sidebar-toggle.active span:after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/barn_banquet_hall_with_fairy_lights.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-content {
+            padding: 0 32px;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 24px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            margin-bottom: 32px;
+        }
+
+        .hero-button {
+            background: linear-gradient(135deg, #FBB8AC 0%, #e8a399 100%);
+            color: #fff;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(251, 184, 172, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .hero-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(251, 184, 172, 0.6);
+        }
+
+        .hero-button:hover:before {
+            left: 100%;
+        }
+
+        /* Main Content */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 96px 0;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 64px;
+            margin-bottom: 48px;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            margin-bottom: 32px;
+            color: #2c3e50;
+        }
+
+        .section h3 {
+            margin: 48px 0 24px 0;
+            color: #2c3e50;
+        }
+
+        /* Tier Cards */
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin: 48px 0;
+        }
+
+        .tier-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            padding: 40px 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tier-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #e8a399, #f39c12);
+        }
+
+        .tier-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .tier-card.bronze:before {
+            background: linear-gradient(90deg, #cd7f32, #b8860b);
+        }
+
+        .tier-card.silver:before {
+            background: linear-gradient(90deg, #c0c0c0, #a8a8a8);
+        }
+
+        .tier-card.gold:before {
+            background: linear-gradient(90deg, #ffd700, #ff8c00);
+        }
+
+        .tier-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #2c3e50;
+        }
+
+        .tier-subtitle {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .commission-rate {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #e8a399;
+            margin: 24px 0;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 2px 2px 4px rgba(232, 163, 153, 0.3);
+        }
+
+        .requirements {
+            color: #666;
+            margin: 16px 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .bonus {
+            color: #27ae60;
+            font-weight: bold;
+            margin-top: 16px;
+            font-size: 1rem;
+            background: rgba(39, 174, 96, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* Example Boxes */
+        .example-box {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
+            border-left: 4px solid #e8a399;
+            border-radius: 0 12px 12px 0;
+            padding: 32px;
+            margin: 24px 0;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .example-box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #e8a399, #f39c12);
+        }
+
+        .example-box h4 {
+            color: #2c3e50;
+            margin-bottom: 16px;
+            text-align: left;
+            font-size: 1.2rem;
+        }
+
+        .example-box p {
+            text-align: left;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        /* Calculations */
+        .calculation {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
+            border: 2px solid #e8a399;
+            border-radius: 12px;
+            padding: 32px;
+            margin: 24px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(232, 163, 153, 0.2);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(248, 250, 252, 0.6));
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border-left: 4px solid #e8a399;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #e8a399;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .faq-answer {
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        /* Lists */
+        .terms-list {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+
+        .terms-list li {
+            padding: 16px 0;
+            padding-left: 40px;
+            position: relative;
+            border-bottom: 1px solid rgba(232, 163, 153, 0.2);
+        }
+
+        .terms-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.4rem;
+            background: rgba(39, 174, 96, 0.1);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .terms-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #FBB8AC 0%, #e8a399 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 32px;
+            border-radius: 20px;
+            margin: 64px auto;
+            max-width: 900px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 24px;
+            border: none;
+            padding: 0;
+            font-size: 2.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: white;
+            color: #e8a399;
+            padding: 18px 36px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(232, 163, 153, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+            color: #d35400;
+        }
+
+        .cta-button:hover:before {
+            left: 100%;
+        }
+
+        /* Contact info */
+        .contact-info {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 64px 32px;
+            border-radius: 20px;
+            margin: 64px auto 96px auto;
+            max-width: 900px;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 24px;
+            font-size: 2rem;
+        }
+
+        .contact-info a {
+            color: #FBB8AC;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #e8a399;
+            text-shadow: 0 0 10px rgba(232, 163, 153, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #fff;
+            text-align: center;
+            padding: 48px 32px;
+            margin-top: 96px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                margin-left: 0;
+            }
+
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.collapsed {
+                transform: translateX(-100%);
+            }
+
+            .sidebar-toggle {
+                display: flex;
+            }
+
+            .hero-content {
+                padding: 0 16px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+                margin-bottom: 16px;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+                margin-bottom: 24px;
+            }
+
+            .container {
+                padding: 80px 0;
+            }
+
+            .section {
+                padding: 40px 24px;
+                margin-bottom: 32px;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+                margin-bottom: 24px;
+            }
+
+            .section h3 {
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+            }
+
+            .tier-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                margin: 32px 0;
+            }
+
+            .tier-card {
+                padding: 32px 24px;
+            }
+
+            .commission-rate {
+                font-size: 3rem;
+            }
+
+            .cta-section {
+                margin: 48px auto;
+                padding: 64px 24px;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                margin: 48px auto 48px auto;
+                padding: 48px 24px;
+            }
+
+            .example-box,
+            .faq-item {
+                padding: 24px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <img src="assets/graphics/cloud_9_logo.svg" alt="On Cloud Nine" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#commission-tiers">Commission Tiers</a></li>
+                    <li><a href="#payment-structure">Payment Structure</a></li>
+                    <li><a href="#bonuses">Bonuses & Incentives</a></li>
+                    <li><a href="#calculations">Calculations</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#legal">Legal Disclaimer</a></li>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Sidebar Toggle (Mobile) -->
+    <button class="sidebar-toggle" aria-label="Toggle navigation">
+        <span></span>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Affiliate Commission Guide</h1>
+            <p>Discover our competitive revenue-based commission structure designed to reward your partnership success</p>
+            <a href="#commission-tiers" class="hero-button">Explore Commissions</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section id="overview">
+            <div class="section">
+                <h2>Program Overview</h2>
+                <p>This comprehensive guide outlines the commission structure, payment terms, and incentive programs for On Cloud Nine's Affiliate Program. Designed for wedding planners, photographers, and industry professionals, this program offers competitive commissions and tiered incentives to reward your valuable referrals.</p>
+            </div>
+        </section>
+
+        <section id="commission-tiers">
+            <h2>Commission Rates and Tiers</h2>
+            <div class="section">
+                <h3>Standard Commission Structure</h3>
+                <p>Our affiliate program offers competitive percentage-based commissions on confirmed bookings:</p>
+                <ul style="text-align: center; list-style: none; padding: 0; margin: 32px 0;">
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Base Commission Rate:</strong> 10-15% of total booking value</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Average Commission per Referral:</strong> $1,000 - $1,500+</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Potential Monthly Earnings:</strong> $15,000+</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Potential Annual Earnings:</strong> $50,000+</li>
+                </ul>
+
+                <h3>Revenue-Based Tier Program</h3>
+                <p style="margin-bottom: 48px; font-size: 1.1rem;">Affiliates earn increased commission rates based on total booking revenue generated within a calendar year. Tier status applies to current and future bookings:</p>
+
+                <div class="tier-grid">
+                    <div class="tier-card bronze">
+                        <div class="tier-name">Tier 1</div>
+                        <div class="tier-subtitle">Starter Level</div>
+                        <div class="commission-rate">10%</div>
+                        <div class="requirements">$10,000+ annual revenue</div>
+                        <div class="bonus">Average Commission: $1,000 - $1,250<br>$500 achievement bonus</div>
+                    </div>
+
+                    <div class="tier-card silver">
+                        <div class="tier-name">Tier 2</div>
+                        <div class="tier-subtitle">Established Partner</div>
+                        <div class="commission-rate">12.5%</div>
+                        <div class="requirements">$20,000+ annual revenue</div>
+                        <div class="bonus">Average Commission: $1,250 - $1,875<br>Premium marketing materials<br>$1,000 achievement bonus</div>
+                    </div>
+
+                    <div class="tier-card gold">
+                        <div class="tier-name">Tier 3</div>
+                        <div class="tier-subtitle">Elite Partner</div>
+                        <div class="commission-rate">15%</div>
+                        <div class="requirements">$40,000+ annual revenue</div>
+                        <div class="bonus">Average Commission: $1,500+<br>Dedicated manager support<br>Exclusive venue tours<br>$2,500 achievement bonus</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="payment-structure">
+            <div class="section">
+                <h2>Payment Schedule and Methods</h2>
+                <h3>Payment Timeline</h3>
+                <ul style="text-align: center; list-style: none; padding: 0; margin: 32px 0;">
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Commission Processing:</strong> 30 days after event completion</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Payment Frequency:</strong> Quarterly payouts for active affiliates</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Minimum Payout Threshold:</strong> $500 (earnings accumulate until threshold is met)</li>
+                </ul>
+
+                <h3>Payment Methods</h3>
+                <p style="margin-bottom: 32px;">We offer flexible payment options to accommodate your preferences:</p>
+                <ul style="text-align: center; list-style: none; padding: 0; margin: 32px 0;">
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Direct Deposit:</strong> Electronic transfer to your bank account (recommended)</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Check by Mail:</strong> Physical check sent to your address</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Alternative Arrangements:</strong> Available for international affiliates</li>
+                </ul>
+
+                <h3>Payment Examples</h3>
+                <div class="example-box">
+                    <h4>Example 1 - Single Referral</h4>
+                    <p><strong>Referred Clients:</strong> 1<br>
+                    <strong>Average Booking Value:</strong> $10,000<br>
+                    <strong>Commission Rate:</strong> 10% (Tier 1)<br>
+                    <strong>Commission Earned:</strong> $1,000</p>
+                </div>
+
+                <div class="example-box">
+                    <h4>Example 2 - Two Referrals</h4>
+                    <p><strong>Referred Clients:</strong> 2<br>
+                    <strong>Average Booking Value per Client:</strong> $10,000<br>
+                    <strong>Total Revenue Generated:</strong> $20,000<br>
+                    <strong>Commission Rate:</strong> 12.5% (Tier 2)<br>
+                    <strong>Commission Earned:</strong> $2,500</p>
+                </div>
+
+                <div class="example-box">
+                    <h4>Example 3 - Five Referrals</h4>
+                    <p><strong>Referred Clients:</strong> 5<br>
+                    <strong>Average Booking Value per Client:</strong> $10,000<br>
+                    <strong>Total Revenue Generated:</strong> $50,000<br>
+                    <strong>Commission Rate:</strong> 15% (Tier 3)<br>
+                    <strong>Commission Earned:</strong> $7,500</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bonuses">
+            <div class="section">
+                <h2>Performance Bonuses and Incentives</h2>
+                <h3>Revenue Achievement Bonuses</h3>
+                <p style="margin-bottom: 32px; font-size: 1.1rem;"><strong>Additional commission percentages for reaching revenue milestones:</strong></p>
+                <ul style="text-align: center; list-style: none; padding: 0; margin: 32px 0;">
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;">$25,000+ in referred revenue: <strong>2.5% additional commission</strong></li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;">$50,000+ in referred revenue: <strong>5% additional commission</strong></li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;">$100,000+ in referred revenue: <strong>7.5% additional commission</strong></li>
+                </ul>
+
+                <h3>Tier Achievement Rewards</h3>
+                <p style="margin-bottom: 32px; font-size: 1.1rem;"><strong>One-time bonuses for reaching tier thresholds:</strong></p>
+                <ul style="text-align: center; list-style: none; padding: 0; margin: 32px 0;">
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;">Achieve Tier 1 ($10,000+ revenue): <strong>$500 bonus</strong></li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;">Achieve Tier 2 ($20,000+ revenue): <strong>$1,000 bonus</strong></li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;">Achieve Tier 3 ($40,000+ revenue): <strong>$2,500 bonus</strong></li>
+                </ul>
+
+                <h3>Annual Excellence Awards</h3>
+                <ul style="text-align: center; list-style: none; padding: 0; margin: 32px 0;">
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Top Affiliate of the Year:</strong></li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;">Highest referral volume: <strong>$5,000 bonus</strong></li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;">Highest revenue generated: <strong>$5,000 bonus</strong></li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;">Most improved performance: <strong>$2,500 bonus</strong></li>
+                </ul>
+
+                <h3>Special Incentives</h3>
+                <ul style="text-align: center; list-style: none; padding: 0; margin: 32px 0;">
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Exclusive Venue Access:</strong> Tier 3 affiliates receive complimentary venue tours</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Marketing Material Customization:</strong> Personalized promotional materials</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Priority Support:</strong> Direct access to affiliate management team</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Networking Events:</strong> Invitations to exclusive industry events</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="legal">
+            <div class="section">
+                <h2>Legal Disclaimer</h2>
+                <h3>Important Program Information</h3>
+                <ul style="text-align: center; list-style: none; padding: 0; margin: 32px 0;">
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Program Availability:</strong> The On Cloud Nine Affiliate Program is available only to qualified professionals in the wedding and event industry. Program participation is at the sole discretion of On Cloud Nine management.</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Commission Structure Changes:</strong> All commission rates, tier structures, and bonus programs are subject to change with 30 days advance notice to active affiliates. Historical earnings are not affected by future changes.</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Tax Responsibilities:</strong> Affiliates are solely responsible for reporting and paying any applicable taxes on commission earnings in their jurisdiction. On Cloud Nine may issue appropriate tax documentation as required by law.</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Geographic Restrictions:</strong> Program availability may be limited by local regulations and business licensing requirements. International affiliates must comply with all applicable cross-border payment and tax regulations.</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Professional Conduct:</strong> Affiliates must maintain professional standards and comply with all applicable laws and regulations in their marketing and referral activities. Misrepresentation of On Cloud Nine services may result in immediate program termination.</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Limitation of Liability:</strong> On Cloud Nine reserves the right to modify, suspend, or terminate the affiliate program at any time. We are not liable for any indirect, incidental, or consequential damages arising from program participation.</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>Independent Contractor Status:</strong> Affiliates are independent contractors and not employees of On Cloud Nine. Participation in this program does not create any employment relationship or entitlement to employee benefits.</li>
+                </ul>
+                <p style="text-align: center; font-size: 1.1rem; font-weight: bold; color: #e8a399; margin-top: 32px;">By participating in the On Cloud Nine Affiliate Program, you acknowledge that you have read, understood, and agree to be bound by these terms and all program guidelines.</p>
+            </div>
+        </section>
+
+        <section id="calculations">
+            <div class="section">
+                <h2>Commission Calculations and Examples</h2>
+                <h3>Basic Commission Calculation</h3>
+                <div class="calculation">
+                    Commission = Booking Value × Commission Rate
+                </div>
+
+                <div class="example-box">
+                    <h4>Example Calculation</h4>
+                    <p><strong>Single Referral:</strong> $10,000 booking value<br>
+                    <strong>Commission Rate:</strong> 10% (Tier 1)<br>
+                    <strong>Commission =</strong> $10,000 × 0.10 = <strong>$1,000</strong></p>
+                </div>
+
+                <div class="example-box">
+                    <h4>Tier Advancement Scenario</h4>
+                    <p>An affiliate generates $50,000 in booking revenue from 5 referrals in their first year:</p>
+                    <p><strong>Tier 3 Commission Rate:</strong> 15% (achieved $40,000+ threshold)<br>
+                    <strong>Total Commission:</strong> $50,000 × 0.15 = $7,500<br>
+                    <strong>Tier Achievement Bonus:</strong> $2,500 (Tier 3 achievement)<br>
+                    <strong>Revenue Achievement Bonus:</strong> $1,250 (2.5% additional)<br>
+                    <strong>Total Annual Earnings:</strong> $11,250</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="section">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: When do I receive my commission payments?</div>
+                    <div class="faq-answer">A: Commissions are processed 30 days after event completion and paid quarterly on the 15th of January, April, July, and October.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: What's the minimum payout threshold?</div>
+                    <div class="faq-answer">A: The minimum payout threshold is $500. Earnings accumulate until this threshold is reached.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How are commissions calculated for customized packages?</div>
+                    <div class="faq-answer">A: Commissions are calculated as a percentage of the final booking value, including all add-on services and customizations.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Can I track my referrals and commissions in real-time?</div>
+                    <div class="faq-answer">A: Yes, you'll have access to a personalized affiliate dashboard with real-time tracking of referrals, bookings, and commission earnings.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: What are the requirements to join the affiliate program?</div>
+                    <div class="faq-answer">A: You need an active business in wedding/event services, minimum 2 years experience, and must complete our online application and orientation process.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: What marketing materials do I receive?</div>
+                    <div class="faq-answer">A: You'll receive high-quality images, promotional banners, email templates, social media posts, and customizable brochures.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How do I maintain my tier status?</div>
+                    <div class="faq-answer">A: Maintain your tier by meeting the annual revenue thresholds. Tier status applies to future bookings within the calendar year.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: What happens if I don't meet the minimum revenue requirements?</div>
+                    <div class="faq-answer">A: You'll maintain your current tier status for the remainder of the year, but must meet the threshold again next year to maintain that tier level.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="getting-started">
+            <div class="section">
+                <h2>Getting Started</h2>
+                <p>Ready to join the On Cloud Nine Affiliate Program? Here's how:</p>
+                <ol style="text-align: center; list-style: none; padding: 0; margin: 32px 0;">
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>1. Complete Application:</strong> Fill out our online application form</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>2. Review Process:</strong> Our team reviews applications within 48-72 hours</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>3. Onboarding:</strong> Attend orientation and receive access to materials</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>4. Start Referring:</strong> Begin sharing On Cloud Nine with your clients</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>5. Track Progress:</strong> Monitor your referrals through your affiliate dashboard</li>
+                    <li style="margin-bottom: 16px; font-size: 1.1rem;"><strong>6. Receive Payments:</strong> Get paid quarterly for successful referrals</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <h2>Ready to Start Earning?</h2>
+        <p>Join our affiliate program today and start earning competitive commissions</p>
+        <a href="mailto:affiliates@oncloudnine.love" class="cta-button">Apply Now</a>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>For questions about this commission structure or the affiliate program:</p>
+        <p><strong>Email:</strong> <a href="mailto:affiliates@oncloudnine.love">affiliates@oncloudnine.love</a></p>
+        <p><strong>Support Portal:</strong> Available through your affiliate dashboard</p>
+        <p style="margin-top: 24px; font-size: 0.9rem; opacity: 0.8;">
+            *This commission structure is effective as of January 2025 and subject to periodic review and updates.<br>
+            Affiliates will be notified 30 days in advance of any changes.
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 On Cloud Nine. All rights reserved.</p>
+        <p>Creating magical wedding experiences in Victoria, BC</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.querySelector('.sidebar');
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+
+            // Toggle sidebar function
+            function toggleSidebar() {
+                sidebar.classList.toggle('collapsed');
+                sidebarToggle.classList.toggle('active');
+            }
+
+            // Add click event listener
+            sidebarToggle.addEventListener('click', toggleSidebar);
+
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', function (event) {
+                if (window.innerWidth <= 768) {
+                    if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+                        sidebar.classList.add('collapsed');
+                        sidebarToggle.classList.remove('active');
+                    }
+                }
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) {
+                    sidebar.classList.remove('collapsed');
+                    sidebarToggle.classList.remove('active');
+                } else {
+                    sidebar.classList.add('collapsed');
+                }
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('.sidebar nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+
+                    // Close sidebar on mobile after clicking a link
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.add('collapsed');
+                        sidebarToggle.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
