@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Cloud Nine - Open House Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/barn_wedding_ceremony_setup.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .highlight {
+            font-weight: 700;
+            color: #f8f9fa;
+        }
+
+        .register-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .register-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .hero-content {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-content">
+        <h1>You're Invited</h1>
+        <h2>Open House On Cloud Nine Barn Venue</h2>
+        <p>Join us for an exclusive tour and networking event at our beautiful barn venue. This event is exclusive to
+            our affiliate members only.</p>
+        <p class="highlight">Thursday, November 6th, 2025</p>
+        <p class="highlight">4:00 PM - 7:00 PM</p>
+        <p>Light snacks and beverages will be served while exploring the stunning rustic elegance of our wedding venue.
+            Experience the golden hour lighting and seasonal ambiance that makes Cloud Nine unforgettable.</p>
+        <a href="#" class="register-btn">Register</a>
+    </div>
+</body>
+
+</html>

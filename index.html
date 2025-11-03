@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliates On Cloud Nine - Wedding Venue Partner Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 32px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        h4 {
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 16px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 16px 32px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            max-width: 300px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 16px;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #e8a399, #f39c12);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        nav ul li a:hover {
+            color: #e8a399;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(-100%);
+        }
+
+        .sidebar-content {
+            padding: 24px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .logo {
+            height: auto;
+            width: 100%;
+            margin-bottom: 32px;
+            align-self: flex-start;
+        }
+
+        .sidebar nav ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 16px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar nav ul li {
+            width: 100%;
+        }
+
+        .sidebar nav ul li a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .sidebar nav ul li a:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: #e8a399;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            transform: translateX(4px);
+        }
+
+        .sidebar nav ul li a:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #e8a399, #f39c12);
+            transition: all 0.3s ease;
+            transform: translateY(-50%);
+        }
+
+        .sidebar nav ul li a:hover:after {
+            width: 4px;
+        }
+
+        /* Sidebar Toggle Button */
+        .sidebar-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #FBB8AC 0%, #e8a399 100%);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(251, 184, 172, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(251, 184, 172, 0.6);
+        }
+
+        .sidebar-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: white;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-toggle span:before,
+        .sidebar-toggle span:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-toggle span:before {
+            top: -6px;
+        }
+
+        .sidebar-toggle span:after {
+            top: 6px;
+        }
+
+        .sidebar-toggle.active span {
+            background: transparent;
+        }
+
+        .sidebar-toggle.active span:before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .sidebar-toggle.active span:after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        /* Body adjustments for sidebar */
+        body {
+            margin-left: 280px;
+            transition: margin-left 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/outdoor_wedding_kiss_with_bridesmaids_groomsmen.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            padding: 0 32px;
+        }
+
+        .hero-content h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #FBB8AC 0%, #e8a399 100%);
+            color: #fff;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(251, 184, 172, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            margin-top: 32px;
+        }
+
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(251, 184, 172, 0.6);
+        }
+
+        .cta-button:hover:before {
+            left: 100%;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 96px 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .section-content {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            justify-content: center;
+        }
+
+        .section-content.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .section-text {
+            flex: 1;
+        }
+
+        .section-text h2 {
+            margin-bottom: 32px;
+        }
+
+        .section-text h3 {
+            margin: 0 0 24px 0;
+        }
+
+        .section-text p {
+            margin-bottom: 24px;
+        }
+
+        .section-text ul {
+            margin: 24px 0;
+            padding-left: 24px;
+        }
+
+        .section-text li {
+            margin-bottom: 16px;
+        }
+
+        #conclusion .section-text {
+            text-align: center;
+        }
+
+        .section-image {
+            flex: 1;
+        }
+
+        .section-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .section-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Gallery Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        .gallery-grid figure {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-grid figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.1) saturate(1.2);
+        }
+
+        .gallery-grid figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-grid figure:hover figcaption {
+            opacity: 1;
+        }
+
+        /* Grid Layouts */
+        .grid-2x3,
+        .grid-3-col,
+        .grid-4-col {
+            display: grid;
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .grid-2x3 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3-col {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-4-col {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid-item h4 {
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .grid-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #fff;
+            text-align: center;
+            padding: 48px 32px;
+            margin-top: 96px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.collapsed {
+                transform: translateX(-100%);
+            }
+
+            body {
+                margin-left: 0;
+            }
+
+            .sidebar-toggle {
+                display: flex;
+            }
+
+            .hero-content {
+                padding: 0 16px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+                margin-bottom: 16px;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+                margin-bottom: 24px;
+            }
+
+            .hero-content {
+                padding: 0 16px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+                margin-bottom: 16px;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+                margin-bottom: 24px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .section-content {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .section-content.reverse {
+                flex-direction: column;
+            }
+
+            .section-text h2 {
+                font-size: 2rem;
+                margin-bottom: 24px;
+            }
+
+            .section-text h3 {
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+            }
+
+            .section-text p {
+                margin-bottom: 16px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                margin-top: 32px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .gallery-grid img {
+                height: 200px;
+            }
+
+            .grid-2x3,
+            .grid-3-col,
+            .grid-4-col {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                margin-top: 32px;
+            }
+
+            .grid-item {
+                padding: 24px;
+            }
+
+            footer {
+                padding: 32px 16px;
+                margin-top: 80px;
+            }
+        }
+
+        /* Form Styles */
+        .form-container {
+            display: flex;
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .form-group {
+            flex: 1;
+        }
+
+        .form-group h3 {
+            margin-bottom: 24px;
+            color: black;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-field {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #e8a399;
+            box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #FBB8AC 0%, #e8a399 100%);
+            color: #fff;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(251, 184, 172, 0.4);
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(251, 184, 172, 0.6);
+        }
+
+        /* Modal Styles for Gallery Image Hover Effect */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            display: block;
+        }
+
+        .modal-text {
+            color: white;
+            text-align: center;
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 16px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid white;
+            border-radius: 50%;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10001;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+        }
+
+        /* Mobile responsive adjustments for modal */
+        @media (max-width: 768px) {
+            .modal-content {
+                max-width: 95vw;
+                max-height: 95vh;
+                border-radius: 8px;
+            }
+
+            .modal-content img {
+                max-height: 85vh;
+            }
+
+            .modal-close {
+                width: 45px;
+                height: 45px;
+                font-size: 24px;
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        /* Responsive Form Styles */
+        @media (max-width: 768px) {
+            .form-container {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            form {
+                padding: 24px;
+            }
+
+            .btn-submit {
+                padding: 14px 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation moved to sidebar -->
+    </header>
+
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <img src="assets/graphics/cloud_9_logo.svg" alt="On Cloud Nine" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#image-gallery">Venue Gallery</a></li>
+                    <li><a href="#venue-highlights">Venue Highlights</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#affiliate-steps">Affiliate Steps</a></li>
+                    <li><a href="#commission-structure">Commission Structure</a></li>
+                    <li><a href="affiliate_commission_guide.html">Detailed Commission Guide</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <button class="sidebar-toggle" aria-label="Toggle navigation">
+        <span></span>
+    </button>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Affiliates On Cloud Nine</h1>
+            <p>Join our exclusive partnership program and create magical wedding experiences while earning generous
+                commissions.</p>
+            <a href="#how-to-join" class="cta-button">Apply Here</a>
+        </div>
+    </section>
+
+    <section id="introduction" class="container">
+        <div class="section-content">
+            <div class="section-text">
+                <h2>Introduction</h2>
+                <p>Welcome to the On Cloud Nine Affiliate Program! We're thrilled to invite wedding planners,
+                    photographers, and other industry professionals to join our exclusive partnership program. On Cloud
+                    Nine is a stunning 26-acre venue located in the picturesque Cordova Bay neighbourhood of Victoria,
+                    offering a unique and magical setting for weddings and special events.</p>
+                <p>Our affiliate program is designed to help you enhance your client services while generating
+                    additional income through commissions. By partnering with us, you can offer your clients access to
+                    our exceptional venue and services, creating unforgettable experiences while earning rewards for
+                    your valuable referrals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="image-gallery">
+        <div class="container">
+            <h2>Venue Gallery</h2>
+        </div>
+        <div class="gallery-grid">
+            <figure>
+                <img src="assets/images/barn_aisle_draped_fabric_event.jpg" alt="Barn Aisle Draped Fabric Event">
+                <figcaption>Barn Aisle Draped Fabric Event</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/barn_banquet_hall_with_fairy_lights.jpg"
+                    alt="Barn Banquet Hall With Fairy Lights">
+                <figcaption>Barn Banquet Hall With Fairy Lights</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/barn_dinner_party_setting.jpg" alt="Barn Dinner Party Setting">
+                <figcaption>Barn Dinner Party Setting</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/barn_event_seating_arrangement.jpg" alt="Barn Event Seating Arrangement">
+                <figcaption>Barn Event Seating Arrangement</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/barn_wedding_ceremony_setup.jpg" alt="Barn Wedding Ceremony Setup">
+                <figcaption>Barn Wedding Ceremony Setup</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/equestrian_archway_with_weathervane.jpg"
+                    alt="Equestrian Archway With Weathervane">
+                <figcaption>Equestrian Archway With Weathervane</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/equestrian_facility_aerial_view.jpg" alt="Equestrian Facility Aerial View">
+                <figcaption>Equestrian Facility Aerial View</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/event_table_with_pink_sequins_and_floral_decor.jpg"
+                    alt="Event Table With Pink Sequins And Floral Decor">
+                <figcaption>Event Table With Pink Sequins And Floral Decor</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/festive_barn_dinner_with_christmas_decor.jpg"
+                    alt="Festive Barn Dinner With Christmas Decor">
+                <figcaption>Festive Barn Dinner With Christmas Decor</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/handmade_jewelry_barn_market_stall.jpg"
+                    alt="Handmade Jewelry Barn Market Stall">
+                <figcaption>Handmade Jewelry Barn Market Stall</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/horse_farm_with_blue_roof_barns.jpg" alt="Horse Farm With Blue Roof Barns">
+                <figcaption>Horse Farm With Blue Roof Barns</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/love_letters_courtyard_night.jpg" alt="Love Letters Courtyard Night">
+                <figcaption>Love Letters Courtyard Night</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/modern_barn_complex_with_archway.jpg" alt="Modern Barn Complex With Archway">
+                <figcaption>Modern Barn Complex With Archway</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/outdoor_wedding_kiss_with_bridesmaids_groomsmen.jpg"
+                    alt="Outdoor Wedding Kiss With Bridesmaids Groomsmen">
+                <figcaption>Outdoor Wedding Kiss With Bridesmaids Groomsmen</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/rustic_art_and_furniture_display.jpg" alt="Rustic Art And Furniture Display">
+                <figcaption>Rustic Art And Furniture Display</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/rustic_event_room_with_hot_air_balloons.jpg"
+                    alt="Rustic Event Room With Hot Air Balloons">
+                <figcaption>Rustic Event Room With Hot Air Balloons</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/rustic_refreshment_station_barn_venue.jpg"
+                    alt="Rustic Refreshment Station Barn Venue">
+                <figcaption>Rustic Refreshment Station Barn Venue</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/vintage_buffet_with_canadian_flag_decor.jpg"
+                    alt="Vintage Buffet With Canadian Flag Decor">
+                <figcaption>Vintage Buffet With Canadian Flag Decor</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/wedding_couple_embrace_field_black_white.jpg"
+                    alt="Wedding Couple Embrace Field Black White">
+                <figcaption>Wedding Couple Embrace Field Black White</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/white_barn_with_open_wooden_doors.jpg" alt="White Barn With Open Wooden Doors">
+                <figcaption>White Barn With Open Wooden Doors</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="venue-highlights" class="container">
+        <h2>Venue Highlights</h2>
+        <div class="grid-3-col">
+            <div class="grid-item">
+                <h4>Beautifully maintained indoor and outdoor spaces</h4>
+                <p>Enjoy premium venues perfect for your events.</p>
+            </div>
+            <div class="grid-item">
+                <h4>Expansive grounds with rolling hayfields and natural charm</h4>
+                <p>Stunning natural scenery for memorable occasions.</p>
+            </div>
+            <div class="grid-item">
+                <h4>Versatile event spaces suitable for intimate gatherings or larger celebrations</h4>
+                <p>Flexible spaces to match any event size.</p>
+            </div>
+            <div class="grid-item">
+                <h4>Convenient location just 15 minutes from Victoria and 20 minutes from the International Airport</h4>
+                <p>Easily accessible for all your clients.</p>
+            </div>
+            <div class="grid-item">
+                <h4>Tranquil setting that provides a serene backdrop for special occasions</h4>
+                <p>Peaceful environment for magical moments.</p>
+            </div>
+            <div class="grid-item">
+                <h4>Professional event coordination and planning services</h4>
+                <p>Expert support to ensure flawless execution.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="container">
+        <div class="section-text">
+            <h2>Benefits for Affiliates</h2>
+            <p>Partnering with On Cloud Nine offers numerous advantages designed to support your business growth:</p>
+            <div class="grid-3-col">
+                <div class="grid-item">
+                    <h4>Enhanced Client Services</h4>
+                    <p>Provide your clients with access to exclusive, high-quality services that perfectly complement
+                        your existing work, making their special day even more magical and memorable.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Passive Income Generation</h4>
+                    <p>Earn generous commissions for every client you refer who utilizes our services. It's a
+                        straightforward and effective way to boost your revenue without additional effort on your part.
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <h4>Trusted Partnership</h4>
+                    <p>On Cloud Nine is synonymous with excellence. Partnering with us means your clients will receive
+                        the highest standard of service, reflecting positively on your professional recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="affiliate-steps" class="container">
+        <h2>Affiliate Steps</h2>
+        <div class="grid-4-col">
+            <div class="grid-item">
+                <h4>1. Application</h4>
+                <p><strong>Application</strong>: Complete our quick and easy online application form, providing basic
+                    information about your business and services.</p>
+            </div>
+            <div class="grid-item">
+                <h4>2. Approval</h4>
+                <p><strong>Approval</strong>: Our team will review your application to ensure alignment with our brand
+                    values and client service standards.</p>
+            </div>
+            <div class="grid-item">
+                <h4>3. Onboarding</h4>
+                <p><strong>Onboarding</strong>: Once approved, you'll receive access to our affiliate portal, marketing
+                    materials, and personalized onboarding support.</p>
+            </div>
+            <div class="grid-item">
+                <h4>4. Start Referring</h4>
+                <p><strong>Start Referring</strong>: Begin introducing On Cloud Nine's services to your clients and
+                    start earning commissions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="commission-structure" class="container">
+        <div class="section-text">
+            <h2>Commission Structure</h2>
+            <p>We offer a competitive commission structure designed to reward your valuable referrals:</p>
+            <div class="grid-3-col">
+                <div class="grid-item">
+                    <h4>Standard Commission</h4>
+                    <p>Earn a percentage-based commission on confirmed bookings made through your referral. Our
+                        commission rates are designed to be attractive while ensuring sustainability for our program.
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <h4>Tiered Incentives</h4>
+                    <p>High-performing affiliates can access increased commission percentages by reaching specific
+                        referral volume or revenue tiers.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Payment Schedule</h4>
+                    <p>Commissions are processed according to a clear schedule with quarterly payouts for active
+                        affiliates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="forms" class="container">
+        <h2>Account and Organization Setup</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <h3>Account Creation</h3>
+                <form id="account-form">
+                    <div class="form-field">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" value="John" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" value="Doe" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" value="password123" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" value="password123"
+                            required>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" value="(555) 123-4567" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="business-type">Business Type</label>
+                        <select id="business-type" name="business-type" required>
+                            <option value="Wedding Planner" selected>Wedding Planner</option>
+                            <option value="Photographer">Photographer</option>
+                            <option value="Florist">Florist</option>
+                            <option value="Caterer">Caterer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Create Account</button>
+                </form>
+            </div>
+            <div class="form-group">
+                <h3>Organization Setup</h3>
+                <form id="organization-form">
+                    <div class="form-field">
+                        <label for="org-name">Organization Name</label>
+                        <input type="text" id="org-name" name="org-name" value="Doe Wedding Services" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="org-type">Type</label>
+                        <select id="org-type" name="org-type" required>
+                            <option value="Wedding Planning Agency" selected>Wedding Planning Agency</option>
+                            <option value="Photography Studio">Photography Studio</option>
+                            <option value="Event Management">Event Management</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" value="123 Main Street" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" value="Victoria" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="state">State/Province</label>
+                        <input type="text" id="state" name="state" value="BC" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="postal-code">Postal Code</label>
+                        <input type="text" id="postal-code" name="postal-code" value="V8W 1A1" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" value="Canada" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="website">Website</label>
+                        <input type="url" id="website" name="website" value="www.doeweddings.com" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Setup Organization</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="conclusion" class="container">
+        <div class="section-content reverse">
+            <div class="section-text">
+                <h2>Conclusion</h2>
+                <p>The On Cloud Nine Affiliate Program represents an exceptional opportunity to enhance your service
+                    offerings while generating additional income through our trusted partnership. We've designed this
+                    program to be mutually beneficial, providing you with the tools and support needed to succeed while
+                    ensuring our clients receive the exceptional service they deserve.</p>
+                <p>Our commitment to excellence extends to all our partnerships, and we look forward to working with
+                    professionals who share our passion for creating magical experiences. By joining our affiliate
+                    program, you're not just adding another revenue stream - you're becoming part of a community
+                    dedicated to making dreams come true.</p>
+                <a href="#how-to-join" class="cta-button">Join the On Cloud Nine Affiliate Program Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 On Cloud Nine. All rights reserved.</p>
+            <p>Creating magical wedding experiences in Victoria, BC</p>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const sidebar = document.querySelector('.sidebar');
+                const sidebarToggle = document.querySelector('.sidebar-toggle');
+                const body = document.body;
+
+                // Toggle sidebar function
+                function toggleSidebar() {
+                    sidebar.classList.toggle('collapsed');
+                    sidebarToggle.classList.toggle('active');
+
+                    // Adjust body margin for desktop
+                    if (window.innerWidth > 768) {
+                        if (sidebar.classList.contains('collapsed')) {
+                            body.style.marginLeft = '0';
+                        } else {
+                            body.style.marginLeft = '280px';
+                        }
+                    }
+                }
+
+                // Add click event listener
+                sidebarToggle.addEventListener('click', toggleSidebar);
+
+                // Close sidebar when clicking outside on mobile
+                document.addEventListener('click', function (event) {
+                    if (window.innerWidth <= 768) {
+                        if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+                            sidebar.classList.add('collapsed');
+                            sidebarToggle.classList.remove('active');
+                        }
+                    }
+                });
+
+                // Handle window resize
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 768) {
+                        sidebar.classList.remove('collapsed');
+                        sidebarToggle.classList.remove('active');
+                        body.style.marginLeft = '280px';
+                    } else {
+                        sidebar.classList.add('collapsed');
+                        body.style.marginLeft = '0';
+                    }
+                });
+
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('.sidebar nav a').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+
+                        if (targetElement) {
+                            const headerOffset = 20;
+                            const elementPosition = targetElement.offsetTop;
+                            const offsetPosition = elementPosition - headerOffset;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+
+                        // Close sidebar on mobile after clicking a link
+                        if (window.innerWidth <= 768) {
+                            sidebar.classList.add('collapsed');
+                            sidebarToggle.classList.remove('active');
+                        }
+                    });
+
+                    // Gallery Modal Functionality
+                    const galleryImages = document.querySelectorAll('.gallery-grid img');
+                    const modalOverlay = document.createElement('div');
+                    const modalContent = document.createElement('div');
+                    const modalImg = document.createElement('img');
+                    const modalClose = document.createElement('button');
+
+                    // Setup modal structure
+                    modalOverlay.className = 'modal-overlay';
+                    modalContent.className = 'modal-content';
+                    modalClose.className = 'modal-close';
+                    modalClose.innerHTML = '&times;';
+                    modalClose.setAttribute('aria-label', 'Close modal');
+
+                    const modalText = document.createElement('p');
+                    modalText.className = 'modal-text';
+                    modalText.textContent = 'Press ESC to close';
+
+                    modalContent.appendChild(modalImg);
+                    modalContent.appendChild(modalText);
+                    modalContent.appendChild(modalClose);
+                    modalOverlay.appendChild(modalContent);
+                    document.body.appendChild(modalOverlay);
+
+                    // Function to open modal
+                    function openModal(imgSrc, altText) {
+                        modalImg.src = imgSrc;
+                        modalImg.alt = altText;
+                        modalOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    }
+
+                    // Function to close modal
+                    function closeModal() {
+                        modalOverlay.classList.remove('active');
+                        document.body.style.overflow = ''; // Restore scrolling
+                    }
+
+                    // Add click/touch event listeners to gallery images
+                    galleryImages.forEach(img => {
+                        img.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const imgSrc = this.src;
+                            const altText = this.alt;
+                            openModal(imgSrc, altText);
+                        });
+
+                        // Add hover support for desktop
+                        if (window.innerWidth > 768) {
+                            img.addEventListener('mouseenter', function () {
+                                // Optional: Add any hover-specific behavior here
+                            });
+                        }
+                    });
+
+                    // Close modal when clicking overlay
+                    modalOverlay.addEventListener('click', function (e) {
+                        if (e.target === modalOverlay) {
+                            closeModal();
+                        }
+                    });
+
+                    // Close modal when clicking close button
+                    modalClose.addEventListener('click', closeModal);
+
+                    // Close modal with ESC key
+                    document.addEventListener('keydown', function (e) {
+                        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                            closeModal();
+                        }
+                    });
+
+                    // Handle window resize for responsive behavior
+                    window.addEventListener('resize', function () {
+                        if (window.innerWidth <= 768) {
+                            // Ensure modal closes properly on mobile orientation changes
+                            if (modalOverlay.classList.contains('active')) {
+                                // Optional: Add mobile-specific adjustments here
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+    </footer>
+
+    <!-- Registration Form Popup -->
+    <iframe src="https://my.gotomain.org/widget/form/Eaqy0ktEiwGOybCTb7vR"
+        style="display:none;width:100%;height:100%;border:none;border-radius:3px" id="popup-Eaqy0ktEiwGOybCTb7vR"
+        data-layout="{'id':'POPUP'}" data-trigger-type="showOnScrolling" data-trigger-value="1"
+        data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="leadCollected"
+        data-deactivation-value="" data-form-name="Cloud Nine Affiliate Join" data-height="760"
+        data-layout-iframe-id="popup-Eaqy0ktEiwGOybCTb7vR" data-form-id="Eaqy0ktEiwGOybCTb7vR"
+        title="Cloud Nine Affiliate Join">
+    </iframe>
+    <script src="https://my.gotomain.org/js/form_embed.js"></script>
+</body>
+
+</html>
